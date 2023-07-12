@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: db-deployment
   namespace: jdessy
   labels:
     app: app
@@ -22,7 +22,7 @@ spec:
       - envFrom:
         - secretRef:
             name: db-secret
-        name: app-deployment
-        image: registry.dev.afsmtddso.com/jdessy-harborproject/app:971c881-2892fca
+        name: db-deployment
+        image: registry.dev.afsmtddso.com/jdessy-harborproject/db@sha256:c0fa8ff0edae6c7e8c7da2630ba71517b1b8805ebf1ed4f9a71d4a47d1768596
         ports:
-        - containerPort: 5000
+        - containerPort: 5432
