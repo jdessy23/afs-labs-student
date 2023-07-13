@@ -25,6 +25,6 @@ spec:
         - secretRef:
             name: db-secret
         name: app-deployment
-        image: registry.dev.afsmtddso.com/jdessy-harborproject/app:971c881-2892fca
+        image: registry.dev.afsmtddso.com/jdessy-harborproject/app:b5dcc25-2a77197
         ports:
         - containerPort: 5000
